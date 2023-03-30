@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.adarshr.test-logger' version '3.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+wrapper {
+    gradleVersion = '8.0.2'
+}
+
+sourceCompatibility = '17'
+
+group 'com.spotlight.platform'
+version '1.0.0-SNAPSHOT'
+mainClassName = 'com.spotlight.platform.userprofile.api.web.UserProfileApiApplication'
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Werror" << '-Xlint:unchecked' // Will break the build on Java compiler warnings
+    options.deprecation = true
+}
+
+test {
+    useJUnitPlatform()
+    testlogger {
+        showStandardStreams = true
+    }
+}
+
+dependencies {
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testImplementation 'org.assertj:assertj-core:3.19.0'
+    testImplementation 'org.mockito:mockito-core:3.10.0'
+}
