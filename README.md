@@ -3,14 +3,14 @@
 ## ToDo
 
 - What's missing
-    - Command classes (at least 3) + add description of them below
+    - Command classes (at least 3) + add description of them below. Or should we just describe how they should look and work?
 - Tests
-    - Add JSON helpers (research for something that will play with AsserJ nicely) and add JSON serialization tests
+    - Add JSON helpers (research for something that will play with AssertJ nicely) and add JSON serialization tests
     - Add Mockito if needed and mention in below
     - Add missing integration test for the resource
 - Various
     - Check if we use record classes correctly and where it can also be used
-    - Add meaningful healthcheck
+    - Add meaningful health-check
 - GitHub
     - Create "Phoenix Games" organization
     - Create repository `platform-team-backend-developer-trial-task`
@@ -67,6 +67,7 @@ Your goal is to finish the implementation started by Gabriel mantaining the same
 
 * Endpoint to accept commands.
 * Logic to process different command types and update the user profile accordingly.
+* We were not sure, but maybe we have to accept commands in batches and not one by one?
 
 You are expected to work in the feature branch on GitHub and create a pull request when you are done. Feel free to commit as often and as
 granularly as you want, we like to see the progress in thinking! We provide feedback on the trial task regardless of the result, since we
