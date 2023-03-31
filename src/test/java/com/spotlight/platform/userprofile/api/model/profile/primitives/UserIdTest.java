@@ -5,6 +5,6 @@ import com.spotlight.platform.userprofile.api.model.common.AlphaNumericalStringW
 class UserIdTest extends AlphaNumericalStringWithMaxLengthAbstractTest<UserId> {
     @Override
     protected UserId getInstance(String value) {
-        return new UserId(value);
+        return UserId.valueOf(value);
     }
 }

@@ -8,4 +8,8 @@ public class UserId extends AlphaNumericalStringWithMaxLength {
     protected UserId(String value) {
         super(value);
     }
+
+    public static UserId valueOf(String userId) {
+        return new UserId(userId);
+    }
 }

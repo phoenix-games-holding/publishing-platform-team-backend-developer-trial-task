@@ -10,7 +10,7 @@ class UserProfilePropertyNameTest extends AlphaNumericalStringWithMaxLengthAbstr
 
     @Override
     protected UserProfilePropertyName getInstance(String value) {
-        return new UserProfilePropertyName(value);
+        return UserProfilePropertyName.valueOf(value);
     }
 
     @Test
