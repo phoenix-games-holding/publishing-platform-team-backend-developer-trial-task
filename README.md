@@ -14,7 +14,7 @@
 - GitHub
     - Create "Phoenix Games" organization
     - Create repository `platform-team-backend-developer-trial-task`
-    - Add GitHub repository ass additional remote, GitLab should stay the `origin`
+    - Add GitHub repository as additional remote, GitLab should stay the `origin`
     - Setup CI to run tests on each commit
 
 ## Context
