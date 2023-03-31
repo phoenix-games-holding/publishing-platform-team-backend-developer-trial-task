@@ -8,7 +8,6 @@
     - Add JSON helpers (research for something that will play with AsserJ nicely) and add JSON serialization tests
     - Add Mockito if needed and mention in below
     - Add missing integration test for the resource
-    - Add integration test for the injection
 - Various
     - Check if we use record classes correctly and where it can also be used
     - Add meaningful healthcheck
