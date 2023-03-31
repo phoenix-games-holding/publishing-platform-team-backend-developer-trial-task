@@ -3,9 +3,10 @@
 ## ToDo
 
 - What's missing
-    - Command classes
+    - Command classes (at least 3) + add description of them below
 - Tests
-    - Add JSON helpers (external lib) and add JSON serialization tests
+    - Add JSON helpers (research for something that will play with AsserJ nicely) and add JSON serialization tests
+    - Add Mockito if needed and mention in below
     - Add missing integration test for the resource
     - Add integration test for the injection
 - Various
@@ -21,8 +22,9 @@
 
 Our top individual contributor Gabriel Schweinsteinburgberger recently started to develop a new service called User Profile API.
 Unfortunately for us, Gabriel got spontaneously married during his spiritual journey to Tibet. He decided to gave up developing software in
-favour of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to ship the
-project without him and his valuable contributions.
+favour of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to deliver
+the project without his valuable contributions. We also immediately thought that this situation makes a great trial task for our new
+colleague.
 
 ## Project domain
 
@@ -50,24 +52,30 @@ There is a project which uses the following:
 * Java 17 (project has support for [jenv](https://www.jenv.be), if you are up for it)
 * Gradle 8
 * [Dropwizard](https://www.dropwizard.io/en/latest/)
-* [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) which brings [Guice](https://github.com/google/guice) magic to Dropwizard
-* [JUnit 5](https://junit.org/junit5/)
-* [AssertJ](https://assertj.github.io/doc/)
+* [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) which brings [Guice](https://github.com/google/guice) power to Dropwizard
+* [JUnit 5](https://junit.org/junit5/), [AssertJ](https://assertj.github.io/doc/)
 
 These parts of the application are already implemented:
 
-* `UserResource` is able to return profile of the user
-* `UserProfileDao` and `UserProfileDaoInMemory` implements storage of the user profile
-* POJOs representing commands
+* General project setup is done
+* `UserResource` is able to return profile of the user.
+* `UserProfileDaoInMemory` implements storage of the user profile in memory.
+* POJOs representing commands are there.
 
 ## Your goal
 
-Your goal is to finish the implementation started by Gabriel the way he will like it and may be get back to development.
-
-What's still missing:
+Your goal is to finish the implementation started by Gabriel mantaining the same style and test coverage. What's still missing:
 
 * Endpoint to accept commands.
-* Logic to process commands and update the user profile
+* Logic to process different command types and update the user profile accordingly.
+
+You are expected to work in the feature branch on GitHub and create a pull request when you are done. Feel free to commit as often and as
+granularly as you want, we like to see the progress in thinking! We provide feedback on the trial task regardless of the result, since we
+think it's the least we can do for the candidates that heavily invested time into the trial task.
+
+## What's next?
+
+In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well :).
 
 ## How to?
 
