@@ -49,6 +49,13 @@ class WrappedStringTest {
         assertThat(JSON_MAPPER.convertValue("a", SomeId.class)).isEqualTo(idA);
     }
 
+    @Test
+    void testToString() {
+        SomeId idA = new SomeId("a");
+
+        assertThat(idA).hasToString("a");
+    }
+
     private static class SomeId extends WrappedString {
 
         public SomeId(String value) {
