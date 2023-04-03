@@ -2,32 +2,30 @@
 
 ## ToDo
 
-- Various
-    - Spell-check the `README.md`
 - GitHub
     - Create "Phoenix Games" organization
     - Create public repository `platform-team-backend-developer-trial-task`
-    - Add GitHub repository as additional remote, GitLab should stay the `origin`
+    - Add GitHub repository as an additional remote, GitLab should stay the `origin`
     - Setup CI to run tests on each commit
     - Prohibit forks and pushes (so candidates will not be able to see each-other work)
 
 ## Context
 
 Our top individual contributor Gabriel Schweinsteinburgberger recently started to develop a new service called User Profile API.
-Unfortunately for us, Gabriel got spontaneously married during his spiritual journey to Tibet. He decided to gave up developing software in
-favour of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to deliver
+Unfortunately for us, Gabriel got spontaneously married during his spiritual journey to Tibet. He decided to give up developing software in
+favor of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to deliver
 the project on time without his valuable contributions. We also immediately thought that this situation makes a great trial task for our new
 colleague.
 
 ## Project domain
 
-The idea of the User Profile API is to accept commands from various sources and update user profile according to them. User profile is a
-collection of properties associated with the `userId`. The service was born to life to decouple operations on the user profile and its
+The idea of the User Profile API is to accept commands from various sources and update the user profile according to them. The user profile is a
+collection of properties associated with the `userId`. The service was born to live to decouple operations on the user profile and its
 storage from the logic responsible for extracting the data from the outside world.
 
 We foresee the following command types:
 
-* `replace` to replace the value of certain property of the user profile.
+* `replace` to replace the value of a certain property of the user profile.
   ```json
   {
     "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
@@ -39,7 +37,7 @@ We foresee the following command types:
   }
   ```
 
-* `increment` increments the current value in the profile. Increment can also take negative numbers to decrement the value.
+* `increment` increments the current value in the profile. This command can also take negative numbers to decrement the value.
   ```json
   {
     "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
@@ -63,10 +61,10 @@ We foresee the following command types:
   }
   ```
 
-Multiple applications generate command to update the user profile and send them to User Profile API over HTTP. One example of such
-applications is a streaming application that listen to the stream of user activity events and sent the command when certain criteria is met.
+Multiple applications generate commands to update the user profile and send them to User Profile API over HTTP. One example of such
+applications is a streaming application that listens to the stream of user activity events and sent the command when certain criteria are met.
 For example, for the user property called `numberOfLogins`, the streaming application can listen to `login` events and send an `increment`
-command to User Profile API when such event occurs.
+command to User Profile API when such an event occurs.
 
 Another example is an ETL application which is run periodically and extracts information from the database to
 populate `averagePlayTimePerWeek` property by sending `replace` commands to User Profile API.
@@ -84,9 +82,9 @@ There is a project which uses the following:
 These parts of the application are already implemented:
 
 * General project setup is done
-* `UserResource` is able to return profile of the user.
+* `UserResource` is able to return the profile of the user.
 * `UserProfileDaoInMemory` implements storage of the user profile in memory.
-* There are examples of fixture usage, integration tests and mocking in the tests
+* There are examples of fixture usage, integration tests, and mocking in the tests
 
 ## Your goal
 
@@ -98,12 +96,12 @@ These parts of the application are already implemented:
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
 granularly as you want, we like to see how the progress was.
 
-In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well.
+In the end, we will print the diff and send it to Gabriel via paper mail, so he will be able to review it as well.
 
 ## A bit more serious
 
 * This is a trial task for a developer position, so the story behind it is fake.
-* We provide feedback on the trial task regardless of the result, since we think it's the least we can do for the candidates that heavily
+* We provide feedback on the trial task regardless of the result since we think it's the least we can do for the candidates that heavily
   invested time into the trial task.
 * Trial task will not be compensated or paid.
 
