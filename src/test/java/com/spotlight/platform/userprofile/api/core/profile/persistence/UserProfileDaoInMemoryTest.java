@@ -19,6 +19,7 @@ class UserProfileDaoInMemoryTest {
     @Test
     void putAndGetUser_ReturnsCorrectValues() {
         dao.put(UserProfileFixtures.USER_PROFILE);
+
         assertThat(dao.get(UserProfileFixtures.USER_ID)).hasValueSatisfying(
                 userProfile -> assertThat(userProfile).usingRecursiveComparison().isEqualTo(USER_PROFILE));
     }

@@ -57,14 +57,12 @@ class WrappedStringTest {
     }
 
     private static class SomeId extends WrappedString {
-
         public SomeId(String value) {
             super(value);
         }
     }
 
     private static class AnotherId extends WrappedString {
-
         public AnotherId(String value) {
             super(value);
         }

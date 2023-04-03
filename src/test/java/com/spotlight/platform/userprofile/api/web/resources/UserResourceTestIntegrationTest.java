@@ -42,7 +42,7 @@ class UserResourceTestIntegrationTest {
             var response = client.targetRest().path(URL).resolveTemplate(USER_ID_PATH_PARAM, UserProfileFixtures.USER_ID).request().get();
 
             assertThat(response.getStatus()).isEqualTo(HttpStatus.OK_200);
-            assertThatJson(response.readEntity(UserProfile.class)).isEqualTo(UserProfileFixtures.USER_PROFILE);
+            assertThatJson(response.readEntity(UserProfile.class)).isEqualTo(UserProfileFixtures.SERIALIZED_USER_PROFILE);
         }
     }
 }

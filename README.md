@@ -2,10 +2,7 @@
 
 ## ToDo
 
-- Tests
-    - Add JSON serialization tests (including resource integration test)
 - Various
-    - Check if we use record classes correctly and where it can also be used
     - Spell-check the `README.md`
 - GitHub
     - Create "Phoenix Games" organization

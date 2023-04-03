@@ -1,5 +1,6 @@
 package com.spotlight.platform.userprofile.api.model.profile.primitives;
 
+import com.spotlight.platform.helpers.FixtureHelpers;
 import com.spotlight.platform.userprofile.api.model.profile.UserProfile;
 
 import java.time.Instant;
@@ -13,4 +14,6 @@ public class UserProfileFixtures {
 
     public static final UserProfile USER_PROFILE = new UserProfile(USER_ID, LAST_UPDATE_TIMESTAMP,
             Map.of(UserProfilePropertyName.valueOf("property1"), UserProfilePropertyValue.valueOf("property1Value")));
+
+    public static final String SERIALIZED_USER_PROFILE = FixtureHelpers.fixture("/fixtures/model/profile/userProfile.json");
 }
