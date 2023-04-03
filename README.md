@@ -8,7 +8,7 @@
     - Add missing integration test for the resource
 - Various
     - Check if we use record classes correctly and where it can also be used
-    - Add meaningful health-check
+    - Spell-check the `README.md`
 - GitHub
     - Create "Phoenix Games" organization
     - Create private repository `platform-team-backend-developer-trial-task`
@@ -30,10 +30,41 @@ The idea of the User Profile API is to accept commands from various sources and 
 collection of properties associated with the `userId`. The service was born to life to decouple operations on the user profile and its
 storage from the logic responsible for extracting the data from the outside world.
 
-Example of the command types are:
+We foresee the following command types:
 
-* `replace` to replace the value of certain property of the user profile;
-* `increment` to increment the value.
+* `replace` to replace the value of certain property of the user profile.
+  ```json
+  {
+    "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
+    "type": "replace",
+    "properties": {
+      "currentGold": 500,
+      "currentGems": 800
+    }
+  }
+  ```
+
+* `increment` increments the current value in the profile. Increment can also take negative numbers to decrement the value.
+  ```json
+  {
+    "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
+    "type": "increment",
+    "properties": {
+      "battleFought": 10
+    }
+  }
+  ```
+
+* `collect` adds values to a list of the values in the user profile property:
+  ```json
+  {
+    "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
+    "type": "collect",
+    "properties": {
+      "inventory": ["sword1", "sword2", "shield1"]
+    }
+  }
+  ```
 
 Multiple applications generate command to update the user profile and send them to User Profile API over HTTP. One example of such
 applications is a streaming application that listen to the stream of user activity events and sent the command when certain criteria is met.
@@ -61,18 +92,18 @@ These parts of the application are already implemented:
 
 ## Your goal
 
-Your goal is to finish the implementation started by Gabriel maintaining the same style and test coverage. What's still missing:
-
-* Endpoint to accept commands.
-* Logic to process different command types and update the user profile accordingly.
-* We were not sure, but maybe we have to accept commands in batches and not one by one?
+* Finish the implementation started by Gabriel maintaining the same style and test coverage level.
+* Add the following components:
+    * Endpoint to accept commands.
+    * Logic to process different command types and update the user profile accordingly.
+    * We were not sure, but maybe we have to accept commands in batches and not one by one?
 
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
-granularly as you want, we like to see the progress in thinking!
+granularly as you want, we like to see how the progress was.
 
 ## What's next?
 
-In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well :).
+In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well.
 
 ## A bit more serious
 
