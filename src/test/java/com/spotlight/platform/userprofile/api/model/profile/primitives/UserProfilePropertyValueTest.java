@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class UserProfilePropertyValueTest {
@@ -18,17 +19,10 @@ class UserProfilePropertyValueTest {
         assertThat(UserProfilePropertyValue.valueOf(LIST_VALUE)).isEqualTo(UserProfilePropertyValue.valueOf(LIST_VALUE));
     }
 
-    /*
     @Test
     void serialization_WorksCorrectly() {
-        JsonTestUtils.assertSerializedObjectIsEqualToFile(Map.of("string", STRING_VALUE, "integer", INTEGER_VALUE, "list", LIST_VALUE),
-                "fixtures/com/spotlight/platform/commons/model/userProfilePropertyValueMap.json");
+        assertThatJson(UserProfilePropertyValue.valueOf(STRING_VALUE)).isEqualTo("someString");
+        assertThatJson(UserProfilePropertyValue.valueOf(INTEGER_VALUE)).isEqualTo("5");
+        assertThatJson(UserProfilePropertyValue.valueOf(LIST_VALUE)).isEqualTo("[\"one\",\"two\"]");
     }
-
-    @Test
-    void deserialization_WorksCorrectly() {
-        JsonHelpers.mapLoader("fixtures/com/spotlight/platform/commons/model/userProfilePropertyValueMap.json")
-                .loadSerializeAndDeserialize();
-    }
-*/
 }
