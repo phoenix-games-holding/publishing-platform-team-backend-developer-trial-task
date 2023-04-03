@@ -8,10 +8,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class PreventStartupWarningHealthCheckTest {
 
-    private static final PreventStartupWarningHealthCheck HEALTH_CHECK = new PreventStartupWarningHealthCheck();
+    private final PreventStartupWarningHealthCheck healthCheck = new PreventStartupWarningHealthCheck();
 
     @Test
-    void healthcheckCalled_returnsHealthy() {
-        assertThat(HEALTH_CHECK.check()).isEqualTo(HealthCheck.Result.healthy());
+    void healthcheckName_isCorrect() {
+        assertThat(PreventStartupWarningHealthCheck.NAME).isEqualTo("preventing-startup-warning-healthcheck");
+    }
+
+    @Test
+    void healthCheckCalled_returnsHealthy() {
+        assertThat(healthCheck.check()).isEqualTo(HealthCheck.Result.healthy());
     }
 }
