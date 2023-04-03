@@ -50,7 +50,8 @@ We foresee the following command types:
     "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
     "type": "increment",
     "properties": {
-      "battleFought": 10
+      "battleFought": 10,
+      "bossesDefeated": -1
     }
   }
   ```
@@ -61,7 +62,8 @@ We foresee the following command types:
     "userId": "de4310e5-b139-441a-99db-77c9c4a5fada",
     "type": "collect",
     "properties": {
-      "inventory": ["sword1", "sword2", "shield1"]
+      "inventory": ["sword1", "sword2", "shield1"],
+      "tools": ["tool1", "tool2"]
     }
   }
   ```

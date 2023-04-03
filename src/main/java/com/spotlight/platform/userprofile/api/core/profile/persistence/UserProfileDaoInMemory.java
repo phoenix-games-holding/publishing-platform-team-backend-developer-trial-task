@@ -12,7 +12,7 @@ public class UserProfileDaoInMemory implements UserProfileDao {
 
     @Override
     public Optional<UserProfile> get(UserId userId) {
-        return Optional.of(storage.get(userId));
+        return Optional.ofNullable(storage.get(userId));
     }
 
     @Override

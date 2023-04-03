@@ -6,7 +6,7 @@ public class PreventStartupWarningHealthCheck extends HealthCheck {
     public static final String NAME = "preventing-startup-warning-healthcheck";
 
     @Override
-    protected Result check() throws Exception {
+    protected Result check() {
         return Result.healthy();
     }
 }

@@ -18,7 +18,7 @@ class UserProfilePropertyValueTest {
         assertThat(UserProfilePropertyValue.valueOf(LIST_VALUE)).isEqualTo(UserProfilePropertyValue.valueOf(LIST_VALUE));
     }
 
-/*
+    /*
     @Test
     void serialization_WorksCorrectly() {
         JsonTestUtils.assertSerializedObjectIsEqualToFile(Map.of("string", STRING_VALUE, "integer", INTEGER_VALUE, "list", LIST_VALUE),
@@ -30,5 +30,5 @@ class UserProfilePropertyValueTest {
         JsonHelpers.mapLoader("fixtures/com/spotlight/platform/commons/model/userProfilePropertyValueMap.json")
                 .loadSerializeAndDeserialize();
     }
- */
+*/
 }

@@ -42,7 +42,6 @@ class EntityNotFoundExceptionMapperTest {
 
     @Path("/")
     public static class MockResource {
-
         public static class RESOURCE_URLS {
             public static final String THROW_EXCEPTION = "/throwEntityNotFoundException";
         }
@@ -52,6 +51,5 @@ class EntityNotFoundExceptionMapperTest {
         public void throwException() {
             throw new EntityNotFoundException();
         }
-
     }
 }

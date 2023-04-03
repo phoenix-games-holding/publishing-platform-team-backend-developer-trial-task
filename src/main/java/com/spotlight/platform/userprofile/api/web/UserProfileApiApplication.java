@@ -43,7 +43,7 @@ public class UserProfileApiApplication extends Application<UserProfileApiConfigu
     }
 
     private void registerHealthChecks(Environment environment) {
-        environment.healthChecks().register(PreventStartupWarningHealthCheck.NAME, new PreventStartupWarningHealthCheck());
+        environment.healthChecks().register(PreventStartupWarningHealthCheck.NAME, getInstance(PreventStartupWarningHealthCheck.class));
     }
 
     private void registerExceptionMappers(Environment environment) {
