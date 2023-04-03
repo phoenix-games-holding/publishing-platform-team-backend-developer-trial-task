@@ -2,8 +2,6 @@
 
 ## ToDo
 
-- What's missing
-    - Command classes (at least 3) + add description of them below. Or should we just describe how they should look and work?
 - Tests
     - Add JSON helpers (research for something that will play with AssertJ nicely) and add JSON serialization tests
     - Add Mockito if needed and mention in below
@@ -13,9 +11,10 @@
     - Add meaningful health-check
 - GitHub
     - Create "Phoenix Games" organization
-    - Create repository `platform-team-backend-developer-trial-task`
+    - Create private repository `platform-team-backend-developer-trial-task`
     - Add GitHub repository as additional remote, GitLab should stay the `origin`
     - Setup CI to run tests on each commit
+    - Prohibit forks and pushes (so candidates will not be able to see each-other work)
 
 ## Context
 
@@ -48,8 +47,8 @@ populate `averagePlayTimePerWeek` property by sending `replace` commands to User
 
 There is a project which uses the following:
 
-* Java 17 (project has support for [jenv](https://www.jenv.be), if you are up for it)
-* Gradle 8
+* Java 17 (project has support for [jenv](https://www.jenv.be), if it's your thing)
+* [Gradle](https://gradle.org/)
 * [Dropwizard](https://www.dropwizard.io/en/latest/)
 * [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) which brings [Guice](https://github.com/google/guice) power to Dropwizard
 * [JUnit 5](https://junit.org/junit5/), [AssertJ](https://assertj.github.io/doc/)
@@ -59,23 +58,28 @@ These parts of the application are already implemented:
 * General project setup is done
 * `UserResource` is able to return profile of the user.
 * `UserProfileDaoInMemory` implements storage of the user profile in memory.
-* POJOs representing commands are there.
 
 ## Your goal
 
-Your goal is to finish the implementation started by Gabriel mantaining the same style and test coverage. What's still missing:
+Your goal is to finish the implementation started by Gabriel maintaining the same style and test coverage. What's still missing:
 
 * Endpoint to accept commands.
 * Logic to process different command types and update the user profile accordingly.
 * We were not sure, but maybe we have to accept commands in batches and not one by one?
 
-You are expected to work in the feature branch on GitHub and create a pull request when you are done. Feel free to commit as often and as
-granularly as you want, we like to see the progress in thinking! We provide feedback on the trial task regardless of the result, since we
-think it's the least we can do for the candidates that heavily invested time into the trial task.
+You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
+granularly as you want, we like to see the progress in thinking!
 
 ## What's next?
 
 In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well :).
+
+## A bit more serious
+
+* This is a trial task for a developer position, the story above is a joke.
+* We provide feedback on the trial task regardless of the result, since we think it's the least we can do for the candidates that heavily
+  invested time into the trial task.
+* Trial task will not be compensated or paid.
 
 ## How to?
 
