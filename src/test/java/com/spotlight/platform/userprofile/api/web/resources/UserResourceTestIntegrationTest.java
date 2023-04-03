@@ -1,6 +1,7 @@
 package com.spotlight.platform.userprofile.api.web.resources;
 
 import com.spotlight.platform.userprofile.api.core.profile.persistence.UserProfileDao;
+import com.spotlight.platform.userprofile.api.model.profile.UserProfile;
 import com.spotlight.platform.userprofile.api.model.profile.primitives.UserProfileFixtures;
 import com.spotlight.platform.userprofile.api.web.UserProfileApiApplication;
 
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import ru.vyarus.dropwizard.guice.test.ClientSupport;
 import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp;
 
+import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestDropwizardApp(value = UserProfileApiApplication.class, randomPorts = true)
@@ -40,6 +42,7 @@ class UserResourceTestIntegrationTest {
             var response = client.targetRest().path(URL).resolveTemplate(USER_ID_PATH_PARAM, UserProfileFixtures.USER_ID).request().get();
 
             assertThat(response.getStatus()).isEqualTo(HttpStatus.OK_200);
+            assertThatJson(response.readEntity(UserProfile.class)).isEqualTo(UserProfileFixtures.USER_PROFILE);
         }
     }
 }
