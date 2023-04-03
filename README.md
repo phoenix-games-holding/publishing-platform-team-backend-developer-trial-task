@@ -3,8 +3,7 @@
 ## ToDo
 
 - Tests
-    - Add JSON helpers (research for something that will play with AssertJ nicely) and add JSON serialization tests (including resource
-      integration test)
+    - Add JSON serialization tests (including resource integration test)
 - Various
     - Check if we use record classes correctly and where it can also be used
     - Spell-check the `README.md`
@@ -20,7 +19,7 @@
 Our top individual contributor Gabriel Schweinsteinburgberger recently started to develop a new service called User Profile API.
 Unfortunately for us, Gabriel got spontaneously married during his spiritual journey to Tibet. He decided to gave up developing software in
 favour of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to deliver
-the project without his valuable contributions. We also immediately thought that this situation makes a great trial task for our new
+the project on time without his valuable contributions. We also immediately thought that this situation makes a great trial task for our new
 colleague.
 
 ## Project domain
@@ -94,22 +93,19 @@ These parts of the application are already implemented:
 
 ## Your goal
 
-* Finish the implementation started by Gabriel maintaining the same style and test coverage level.
+* Finish the implementation maintaining the same style and test coverage level.
 * Add the following components:
     * Endpoint to accept commands.
     * Logic to process different command types and update the user profile accordingly.
-    * We were not sure, but maybe we have to accept commands in batches and not one by one?
 
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
 granularly as you want, we like to see how the progress was.
-
-## What's next?
 
 In the end we will print the diff and send to Gabriel via paper mail, so he will be able to review it as well.
 
 ## A bit more serious
 
-* This is a trial task for a developer position, the story above is a joke.
+* This is a trial task for a developer position, so the story behind it is fake.
 * We provide feedback on the trial task regardless of the result, since we think it's the least we can do for the candidates that heavily
   invested time into the trial task.
 * Trial task will not be compensated or paid.
