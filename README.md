@@ -3,15 +3,14 @@
 ## ToDo
 
 - Tests
-    - Add JSON helpers (research for something that will play with AssertJ nicely) and add JSON serialization tests
-    - Add Mockito if needed and mention in below
-    - Add missing integration test for the resource
+    - Add JSON helpers (research for something that will play with AssertJ nicely) and add JSON serialization tests (including resource
+      integration test)
 - Various
     - Check if we use record classes correctly and where it can also be used
     - Spell-check the `README.md`
 - GitHub
     - Create "Phoenix Games" organization
-    - Create private repository `platform-team-backend-developer-trial-task`
+    - Create public repository `platform-team-backend-developer-trial-task`
     - Add GitHub repository as additional remote, GitLab should stay the `origin`
     - Setup CI to run tests on each commit
     - Prohibit forks and pushes (so candidates will not be able to see each-other work)
@@ -84,13 +83,14 @@ There is a project which uses the following:
 * [Gradle](https://gradle.org/)
 * [Dropwizard](https://www.dropwizard.io/en/latest/)
 * [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) which brings [Guice](https://github.com/google/guice) power to Dropwizard
-* [JUnit 5](https://junit.org/junit5/), [AssertJ](https://assertj.github.io/doc/)
+* [JUnit 5](https://junit.org/junit5/), [Mockito](https://site.mockito.org/), [AssertJ](https://assertj.github.io/doc/)
 
 These parts of the application are already implemented:
 
 * General project setup is done
 * `UserResource` is able to return profile of the user.
 * `UserProfileDaoInMemory` implements storage of the user profile in memory.
+* There are examples of fixture usage, integration tests and mocking in the tests
 
 ## Your goal
 

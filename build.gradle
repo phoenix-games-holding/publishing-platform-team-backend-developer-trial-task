@@ -19,7 +19,7 @@ application {
 }
 
 compileJava {
-    options.compilerArgs << "-Werror" << '-Xlint:unchecked' // Will break the build on Java compiler warnings
+    options.compilerArgs << "-Werror" << '-Xlint:unchecked'
     options.deprecation = true
 }
 
