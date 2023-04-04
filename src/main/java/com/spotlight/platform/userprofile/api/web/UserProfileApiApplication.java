@@ -50,7 +50,7 @@ public class UserProfileApiApplication extends Application<UserProfileApiConfigu
         environment.jersey().register(getInstance(EntityNotFoundExceptionMapper.class));
     }
 
-    protected <T> T getInstance(Class<T> clazz) {
+    private <T> T getInstance(Class<T> clazz) {
         return guiceBundle.getInjector().getInstance(clazz);
     }
 }

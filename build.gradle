@@ -1,6 +1,8 @@
 plugins {
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'com.adarshr.test-logger' version '3.2.0'
+    id 'jacoco'
 }
 
 repositories {
@@ -23,10 +25,32 @@ compileJava {
     options.deprecation = true
 }
 
+shadowJar {
+    archiveClassifier.set('')
+    mergeServiceFiles()
+    dependsOn(distTar, distZip)
+}
+
 test {
     useJUnitPlatform()
     testlogger {
         showStandardStreams = true
+    }
+}
+
+check {
+    finalizedBy jacocoTestReport
+    finalizedBy jacocoTestCoverageVerification
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        failOnViolation = true
+        rule {
+            limit {
+                minimum = 0.95
+            }
+        }
     }
 }
 

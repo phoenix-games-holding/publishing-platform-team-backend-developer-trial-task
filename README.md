@@ -62,14 +62,19 @@ populate `averagePlayTimePerWeek` property by sending `replace` commands to User
 
 ## What is already done
 
-There is a project which uses the following:
+There is a project which is set up in the following way:
 
-* Java 17 LTS (project has support for [jenv](https://www.jenv.be), if it's your thing)
+* Java 17 LTS (with support for [jenv](https://www.jenv.be), if it's your thing)
 * [Gradle](https://gradle.org/)
+  with [Shadow](https://imperceptiblethoughts.com/shadow/introduction/),
+  [JaCoCo](https://docs.gradle.org/current/userguide/jacoco_plugin.html),
+  and [test-logger](https://plugins.gradle.org/plugin/com.adarshr.test-logger)
+  plugins
 * [Dropwizard](https://www.dropwizard.io/en/latest/)
 * [dropwizard-guicey](https://github.com/xvik/dropwizard-guicey) which brings [Guice](https://github.com/google/guice) power to Dropwizard
 * [JUnit 5](https://junit.org/junit5/), [Mockito](https://site.mockito.org/), [AssertJ](https://assertj.github.io/doc/)
   and [JsonUnit](https://github.com/lukas-krecan/JsonUnit#assertj-integration)
+* [GitHub action](https://docs.github.com/en/actions) to build, run checks and tests
 
 These parts of the application are already implemented:
 
@@ -106,8 +111,20 @@ come back to software development.
 ./gradlew test
 ```
 
+### Run checks and tests
+
+```shell
+./gradlew check
+```
+
 ### Run application
 
 ```shell
 ./gradlew run --args='server'
+```
+
+or without Gradle:
+
+```shell
+java -jar ./build/libs/userprofile-api-1.0.0-SNAPSHOT.jar server
 ```

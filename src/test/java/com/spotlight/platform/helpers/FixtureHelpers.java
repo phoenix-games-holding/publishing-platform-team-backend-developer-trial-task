@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class FixtureHelpers {
-    private FixtureHelpers() { /* singleton */ }
+    private FixtureHelpers() {
+    }
 
     public static String fixture(String filename) {
         try {
