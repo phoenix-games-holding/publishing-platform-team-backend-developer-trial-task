@@ -3,11 +3,7 @@
 ## ToDo
 
 - GitHub
-    - Create "Phoenix Games" organization
-    - Create public repository `platform-team-backend-developer-trial-task`
-    - Add GitHub repository as an additional remote, GitLab should stay the `origin`
     - Setup CI to run tests on each commit
-    - Prohibit forks and pushes (so candidates will not be able to see each-other work)
 
 ## Context
 
