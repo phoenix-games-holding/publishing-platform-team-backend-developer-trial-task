@@ -99,8 +99,8 @@ These parts of the application are already implemented:
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
 granularly as you want, we like to see how the progress was.
 
-In the end, we will print the diff and send it to Gabriel Schweinsteinburgberger via paper mail in the hope that he will decide to come back
-to software development.
+In the end, we will print the diff and send it to Gabriel Schweinsteinburgberger via paper mail in a desperate hope that he will decide to
+come back to software development.
 
 ## A bit more serious
 
