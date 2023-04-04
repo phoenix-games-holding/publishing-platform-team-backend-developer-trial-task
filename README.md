@@ -93,6 +93,10 @@ These parts of the application are already implemented:
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
 granularly as you want, we like to see how the progress was.
 
+Please don't fork this repository (otherwise other candidates will see your code), but
+[use it as a template instead](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+.
+
 In the end, we will print the diff and send it to Gabriel Schweinsteinburgberger via paper mail in a desperate hope that he will decide to
 come back to software development.
 
