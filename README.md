@@ -1,7 +1,5 @@
 # Phoenix Games Publishing Platform Backend Developer Trial Task
 
-## Context
-
 Our top individual contributor Gabriel Schweinsteinburgberger recently started to develop a new service called User Profile API.
 Unfortunately for us, Gabriel got spontaneously married during his spiritual journey to Tibet. He decided to give up developing software in
 favor of running a mountain goats farm with his newly wedded wife. A lot of changes for the good for Gabriel, but we still have to deliver
@@ -37,7 +35,7 @@ We foresee the following command types:
     "type": "increment",
     "properties": {
       "battleFought": 10,
-      "bossesDefeated": -1
+      "questsNotCompleted": -1
     }
   }
   ```
