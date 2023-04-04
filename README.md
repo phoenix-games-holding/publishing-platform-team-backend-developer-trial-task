@@ -1,10 +1,5 @@
 # Phoenix Games Publishing Platform Backend Developer Trial Task
 
-## ToDo
-
-- GitHub
-    - Setup CI to run tests on each commit
-
 ## Context
 
 Our top individual contributor Gabriel Schweinsteinburgberger recently started to develop a new service called User Profile API.
