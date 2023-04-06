@@ -9,6 +9,7 @@ import java.util.Map;
 public class UserProfileFixtures {
     public static final UserId USER_ID = UserId.valueOf("existing-user-id");
     public static final UserId NON_EXISTING_USER_ID = UserId.valueOf("non-existing-user-id");
+    public static final UserId INVALID_USER_ID = UserId.valueOf("invalid-user-id-%");
 
     public static final Instant LAST_UPDATE_TIMESTAMP = Instant.parse("2021-06-01T09:16:36.123Z");
 

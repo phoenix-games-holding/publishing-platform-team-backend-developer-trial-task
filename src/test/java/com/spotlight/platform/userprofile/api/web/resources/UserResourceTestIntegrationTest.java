@@ -27,6 +27,15 @@ class UserResourceTestIntegrationTest {
         private static final String URL = "/users/{%s}/profile".formatted(USER_ID_PATH_PARAM);
 
         @Test
+        void existingUser_correctObjectIsReturned(ClientSupport client, UserProfileDao userProfileDao) {
+            userProfileDao.put(UserProfileFixtures.USER_PROFILE);
+            var response = client.targetRest().path(URL).resolveTemplate(USER_ID_PATH_PARAM, UserProfileFixtures.USER_ID).request().get();
+
+            assertThat(response.getStatus()).isEqualTo(HttpStatus.OK_200);
+            assertThatJson(response.readEntity(UserProfile.class)).isEqualTo(UserProfileFixtures.SERIALIZED_USER_PROFILE);
+        }
+
+        @Test
         void nonExistingUser_returns404(ClientSupport client) {
             var response = client.targetRest()
                     .path(URL)
@@ -37,12 +46,13 @@ class UserResourceTestIntegrationTest {
         }
 
         @Test
-        void existingUser_correctObjectIsReturned(ClientSupport client, UserProfileDao userProfileDao) {
-            userProfileDao.put(UserProfileFixtures.USER_PROFILE);
-            var response = client.targetRest().path(URL).resolveTemplate(USER_ID_PATH_PARAM, UserProfileFixtures.USER_ID).request().get();
-
-            assertThat(response.getStatus()).isEqualTo(HttpStatus.OK_200);
-            assertThatJson(response.readEntity(UserProfile.class)).isEqualTo(UserProfileFixtures.SERIALIZED_USER_PROFILE);
+        void validationFailed_returns400(ClientSupport client) {
+            var response = client.targetRest()
+                    .path(URL)
+                    .resolveTemplate(USER_ID_PATH_PARAM, UserProfileFixtures.INVALID_USER_ID)
+                    .request()
+                    .get();
+            assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST_400);
         }
     }
 }
