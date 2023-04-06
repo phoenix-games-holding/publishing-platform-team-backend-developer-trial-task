@@ -81,7 +81,7 @@ These parts of the application are already implemented:
 * General project setup is done
 * `UserResource` is able to return the profile of the user.
 * `UserProfileDaoInMemory` implements storage of the user profile in memory.
-* There are examples of fixture usage, integration tests, and mocking in the tests
+* There are examples of fixture usage, integration tests, and mocking.
 
 ## Your goal
 
@@ -130,5 +130,12 @@ come back to software development.
 or without Gradle:
 
 ```shell
+./gradlew build
 java -jar ./build/libs/userprofile-api-1.0.0-SNAPSHOT.jar server
+```
+
+### How to make a request to a running application
+
+```shell
+curl http://localhost:8080/users/some-user-id/profile
 ```
