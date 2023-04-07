@@ -32,7 +32,7 @@ import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;
 
 @Execution(ExecutionMode.SAME_THREAD)
-class UserResourceTestIntegrationTest {
+class UserResourceIntegrationTest {
     @RegisterExtension
     static TestDropwizardAppExtension APP = TestDropwizardAppExtension.forApp(UserProfileApiApplication.class)
             .randomPorts()
