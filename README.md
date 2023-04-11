@@ -14,7 +14,7 @@ service.
 User Profile API was born to live to decouple operations on the user profile and its storage from the logic responsible for extracting the
 data from the outside world.
 
-We foresee the following command types:
+We foresee the following command types needed from the start and more types added in the future:
 
 * `replace` to replace the value of a certain property of the user profile.
   ```json
@@ -85,10 +85,11 @@ These parts of the application are already implemented:
 
 ## Your goal
 
-* Finish the implementation maintaining the same style and test coverage level.
 * Add the following components:
-    * Endpoint to accept commands.
+    * Endpoint to accept commands. We also thought about receiving commands in batches.
     * Logic to process different command types and update the user profile accordingly.
+* Design code in a way that will make adding new command types easy.
+* Maintain a coherent coding style and keep the test coverage level.
 
 You are expected to work in your own Git repository and send us a link to it when you are done. Feel free to commit as often and as
 granularly as you want, we like to see how the progress was.
