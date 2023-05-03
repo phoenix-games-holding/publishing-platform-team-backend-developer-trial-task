@@ -2,6 +2,8 @@ package com.spotlight.platform.userprofile.api.model.common;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Locale;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
@@ -10,7 +12,7 @@ import io.dropwizard.jersey.validation.Validators;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public abstract class AlphaNumericalStringWithMaxLengthAbstractTest<T> {
-    private final Validator validator = Validators.newValidator();
+    private final Validator validator = Validators.newConfiguration().defaultLocale(Locale.ENGLISH).buildValidatorFactory().getValidator();
 
     protected abstract T getInstance(String value);
 
