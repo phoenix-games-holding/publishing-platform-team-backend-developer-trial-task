@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import ru.vyarus.dropwizard.guice.test.jupiter.TestDropwizardApp;
 
 import static org.assertj.core.api.Assertions.assertThat;

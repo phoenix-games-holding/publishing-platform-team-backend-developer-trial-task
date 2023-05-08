@@ -6,9 +6,9 @@ import com.spotlight.platform.userprofile.api.web.exceptionmappers.EntityNotFoun
 import com.spotlight.platform.userprofile.api.web.healthchecks.PreventStartupWarningHealthCheck;
 import com.spotlight.platform.userprofile.api.web.modules.UserProfileApiModule;
 
-import io.dropwizard.Application;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.setup.Bootstrap;
+import io.dropwizard.core.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class UserProfileApiApplication extends Application<UserProfileApiConfiguration> {

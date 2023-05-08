@@ -36,11 +36,9 @@ test {
     testlogger {
         showStandardStreams = true
     }
-    systemProperties = [
-            'junit.jupiter.execution.parallel.enabled'             : 'true',
-            'junit.jupiter.execution.parallel.mode.classes.default': 'concurrent',
-            'junit.jupiter.execution.parallel.mode.default'        : 'concurrent'
-    ]
+    systemProperties = ['junit.jupiter.execution.parallel.enabled'             : 'true',
+                        'junit.jupiter.execution.parallel.mode.classes.default': 'concurrent',
+                        'junit.jupiter.execution.parallel.mode.default'        : 'concurrent']
 }
 
 check {
@@ -60,9 +58,9 @@ jacocoTestCoverageVerification {
 }
 
 dependencies {
-    implementation platform('io.dropwizard:dropwizard-bom:2.1.6')
+    implementation platform('io.dropwizard:dropwizard-bom:3.0.0')
     implementation 'io.dropwizard:dropwizard-testing'
-    implementation 'ru.vyarus:dropwizard-guicey:5.7.1'
+    implementation 'ru.vyarus:dropwizard-guicey:6.0.1'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
